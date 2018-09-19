@@ -25,10 +25,12 @@ class DashboardController extends Controller
      */
     public function index()
     {   
+        /*
         if(!Gate::allows('isAuthor')){ // example of user's role
             abort(404, 'Sorry, not author, access denied');
         }
-
+        */
+        
         $user_id = auth()->user()->id;
         $user = User::find($user_id);
         return view('dashboard')->with('posts', $user->posts);
