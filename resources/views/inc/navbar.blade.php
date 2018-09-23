@@ -21,9 +21,11 @@
                 <li class="nav-item {{ request()->is('posts') ? 'active' : '' }}">
                     <a class="nav-link" href="/posts">Blog</a>
                 </li>
-                <li class="nav-item {{ request()->is('vblog') ? 'active' : '' }}">
-                    <a class="nav-link" href="/vblog">VBlog</a>
-                </li>
+                @can('isAuthor')
+                    <li class="nav-item {{ request()->is('vblog') ? 'active' : '' }}">
+                        <a class="nav-link" href="/vblog">VBlog</a>
+                    </li>
+                @endcan
             </ul>
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ml-auto">
