@@ -19,7 +19,7 @@ class ApiPostsController extends Controller
     public function index()
     {
         // get api posts
-        $posts = Post::paginate(10);
+        $posts = Post::orderBy('created_at', 'desc')->paginate(10);
         return PostResource::collection($posts);
     }
 

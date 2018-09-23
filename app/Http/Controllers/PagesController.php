@@ -23,4 +23,10 @@ class PagesController extends Controller
         );
         return view('pages.services')->with($data);
     }
+
+    // api vue
+    public function vblog(){
+        $title = 'Blog (API Vue)';
+        return view('pages.vueblog')->with('title', $title);
+    }
 }
