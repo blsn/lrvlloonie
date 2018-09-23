@@ -26,4 +26,4 @@ Auth::routes();
 
 Route::get('/dashboard', 'DashboardController@index');
 
-Route::get('/vueapiblog', 'PagesController@vueapiblog');
+Route::get('/vblog', 'PagesController@vblog');

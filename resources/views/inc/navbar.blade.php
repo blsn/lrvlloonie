@@ -20,7 +20,10 @@
                 </li>
                 <li class="nav-item {{ request()->is('posts') ? 'active' : '' }}">
                     <a class="nav-link" href="/posts">Blog</a>
-                </li>                
+                </li>
+                <li class="nav-item {{ request()->is('vblog') ? 'active' : '' }}">
+                    <a class="nav-link" href="/vblog">VBlog</a>
+                </li>
             </ul>
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ml-auto">
