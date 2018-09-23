@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Gate;
 
 class PagesController extends Controller
 {
@@ -26,7 +27,11 @@ class PagesController extends Controller
 
     // api vue
     public function vblog(){
-        $title = 'Blog (API Vue)';
+        if(!Gate::allows('isAuthor')){ // roles
+            abort(404, 'Sorry, not author, access denied');
+        }
+        
+        $title = 'VBlog (API Vue)';
         return view('pages.vueblog')->with('title', $title);
     }
 }
