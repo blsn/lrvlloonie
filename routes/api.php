@@ -32,3 +32,8 @@ Route::put('post', 'ApiPostsController@store'); // use store again
 
 // delete post
 Route::delete('post/{id}', 'ApiPostsController@destroy');
+
+// passport
+//Route::get('todos', 'TodoController')->middleware('auth:api');
+Route::get('passports', 'PostsPassportController')->middleware('auth:api');
+//Route::get('passports', 'PostsPassportController');
