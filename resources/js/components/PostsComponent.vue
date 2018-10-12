@@ -7,7 +7,7 @@
 
                     <div class="card card-body mb-2" v-for="post in posts" v-bind:key="post.id">
                         <h3>{{ post.title }}</h3>
-                        <p>{{ post.body }}</p>
+                        <p v-html="post.body"></p>
                         <hr>
                         <button @click="editPost(post)" class="btn btn-warning mb-2 col-md-3">Edit</button>
                         <button @click="deletePost(post.id)" class="btn btn-danger col-md-3">Delete</button>
