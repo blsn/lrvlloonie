@@ -9,7 +9,7 @@ use App\Post;
 use DB;
 use App\Http\Resources\Post as PostResource;
 
-class ApiPostsController extends Controller
+class PostsApiController extends Controller
 {
     /**
      * Display a listing of the resource.
