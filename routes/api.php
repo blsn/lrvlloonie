@@ -19,19 +19,19 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 // list posts
 //Route::get('posts', 'PostsController@index');
-Route::get('posts', 'ApiPostsController@index');
+Route::get('posts', 'PostsApiController@index');
 
 // list single post
-Route::get('post/{id}', 'ApiPostsController@show');
+Route::get('post/{id}', 'PostsApiController@show');
 
 // create new post
-Route::post('post', 'ApiPostsController@store');
+Route::post('post', 'PostsApiController@store');
 
 // update post
-Route::put('post', 'ApiPostsController@store'); // use store again
+Route::put('post', 'PostsApiController@store'); // use store again
 
 // delete post
-Route::delete('post/{id}', 'ApiPostsController@destroy');
+Route::delete('post/{id}', 'PostsApiController@destroy');
 
 // passport
 //Route::get('passports', 'PostsPassportController');
