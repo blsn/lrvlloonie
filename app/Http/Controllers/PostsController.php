@@ -47,9 +47,9 @@ class PostsController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'title' => 'required',
-            'body'  => 'required',
-            'cover_image' => 'image|nullable|max:1999'
+            'title'         => 'required',
+            'body'          => 'required',
+            'cover_image'   => 'image|nullable|max:1999'
         ]);
 
         // Handle File Upload

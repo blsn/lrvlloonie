@@ -25,8 +25,7 @@ class PagesController extends Controller
         return view('pages.services')->with($data);
     }
 
-    // api vue
-    public function vblog(){
+    public function vblog(){ // api vue
         if(!Gate::allows('isAuthor')){ // roles
             abort(404, 'Sorry, not author, access denied');
         }
